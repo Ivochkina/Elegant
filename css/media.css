@@ -2,19 +2,23 @@
     .show-flex_img {
         width: 50%;
     }
-.header-top{
-    padding:  15px;
-}
+
+    .header-top {
+        padding: 15px;
+    }
+
+    .header-top h2 {
+        top: 30px;
+    }
 }
 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 
 
     .header-top h2 {
         display: none;
     }
-
 
 
     .people, .contact, .tell {
@@ -67,61 +71,84 @@
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        /*padding-bottom:  110%;*/
 
     }
 
-header h1{
-    margin-top: 260px;
-    font-size: 60px;
+    header h1 {
+        margin-top: 260px;
+        font-size: 60px;
 
-}
-header h1:after{
-    display: block;
-    content: "";
-    background-image: url("../images/after_03.png");
-    width: 61px;
-    height: 61px;
-    color: white;
-    border-radius: 50%;
-    /*margin-top: 75px;*/
-    position: relative;
-    left: 45%;
-    top: 60px;
+    }
 
-}
+    header h1:after {
+        display: block;
+        content: "";
+        background-image: url("../images/after_03.png");
+        width: 61px;
+        height: 61px;
+        color: white;
+        border-radius: 50%;
+        position: relative;
+        left: 45%;
+        top: 60px;
+
+    }
 
     .header-top {
-        background-color: #545a5b;
-        opacity: 0.7;
+        background-color: rgba(84, 90, 91, 0.7);
         padding: initial;
     }
-.header-top_logo{
-    margin: 10px 0 10px 25px;
-}
-.eee{
-    width: 86px;
-    height: unset  ;
-    background-color: #253036;
-    opacity: 0.6;
-}
+
+    .header-top_logo {
+        margin: 10px 0 10px 25px;
     }
 
+    .header-top_wrap {
+        width: 65px;
+        background-color: rgba(39, 50, 55, 0.7);
+    }
+
+}
+
+.nav.is-active {
+    background-color: black;
+    opacity: 1;
+
+}
 
 
+.nav__trigger.is-active {
+    position: absolute;
+    right: 6%;
+}
+
+
+.nav__trigger {
+    position: absolute;
+    top: 4%;
+    right: 9%;
+
+}
+
+.nav__content {
+    top: 40%;
+    left: 63%;
+}
+
+.nav__item a {
+    color: white;
+}
 
 
 @media only screen and (max-width: 414px) {
 
 
-
 }
-
 
 
 @media only screen and (max-width: 320px) {
-.contact-info p{
-    font-size: 15px;
-}
+    .contact-info p {
+        font-size: 15px;
+    }
 
 }

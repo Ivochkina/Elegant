@@ -5,16 +5,191 @@
 }
 
 
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 3.75rem;
+    background-color: transparent;
+    transition: 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    will-change: width;
+    z-index: 99;
+}
 
+.nav__trigger.is-active {
+    position: absolute;
+    right: 0;
+}
 
+.nav.is-active {
+    width: 100%;
+    background-color: lightskyblue;
+}
 
+.nav__trigger {
+    display: block;
+    position: relative;
+    top: 1%;
+    right: 45%;
+    margin-right: 20%;
+    margin-top: -10px;
+    padding: 8px 0;
+    transition: 0.2s ease-in-out;
+    z-index: 10;
+}
+
+.nav__trigger .bars {
+    position: relative;
+}
+
+.nav__trigger .bars, .nav__trigger .bars:before, .nav__trigger .bars:after {
+    width: 28px;
+    height: 4px;
+    background-color: white;
+    border-radius: 4px;
+    transition: 0.2s ease-in-out;
+}
+
+.nav__trigger .bars:before, .nav__trigger .bars:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    will-change: transform;
+}
+
+.nav__trigger .bars:before {
+    transform: translateY(-8px);
+}
+
+.nav__trigger .bars:after {
+    transform: translateY(8px);
+}
+
+.nav__trigger.is-active {
+    transform: rotate(-45deg);
+    position: absolute;
+    right: 6%;
+}
+
+.nav__trigger.is-active .bars:before, .nav__trigger.is-active .bars:after {
+    transform: translateX(0) rotate(-90deg);
+}
+
+.nav__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem 3.75rem 1rem 2.75rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -50%);
+    transition: 0s linear 0.25s;
+}
+
+.nav__content.is-active {
+    visibility: visible;
+    opacity: 1;
+    transition: 0s linear;
+}
+
+.nav__content.is-active .nav__item a {
+    opacity: 1;
+    transform: translateY(0);
+    transition-property: transform, opacity, color;
+    transition-duration: 0.55s, 0.55s, 0.3s;
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1), ease-in-out, ease-in-out;
+}
+
+.nav__content.is-active .nav__list .nav__item:nth-of-type(1) a {
+    transition-delay: 0s, 0s, 0s;
+}
+
+.nav__content.is-active .nav__list .nav__item:nth-of-type(2) a {
+    transition-delay: 0.05s, 0.05s, 0s;
+}
+
+.nav__content.is-active .nav__list .nav__item:nth-of-type(3) a {
+    transition-delay: 0.1s, 0.1s, 0s;
+}
+
+.nav__content.is-active .nav__list .nav__item:nth-of-type(4) a {
+    transition-delay: 0.15s, 0.15s, 0s;
+}
+
+.nav__content.is-active .nav__list .nav__item:nth-of-type(5) a {
+    transition-delay: 0.2s, 0.2s, 0s;
+}
+
+.nav__content.is-active .nav__list .nav__item:nth-of-type(6) a {
+    transition-delay: 0.25s, 0.25s, 0s;
+}
+
+.nav__content.is-active .nav__list .nav__item:nth-of-type(7) a {
+    transition-delay: 0.3s, 0.3s, 0s;
+}
+
+.nav__content.is-active .nav__list .nav__item:nth-of-type(8) a {
+    transition-delay: 0.35s, 0.35s, 0s;
+}
+
+.nav__content.is-active .nav__list .nav__item:nth-of-type(9) a {
+    transition-delay: 0.4s, 0.4s, 0s;
+}
+
+.nav__list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__item {
+    overflow: hidden;
+}
+
+.nav__item a {
+    display: inline-block;
+    padding: 1rem;
+    color: darkblue;
+    text-decoration: none;
+    font-size: 3rem;
+    font-size: 10vw;
+    font-size: 14vmin;
+    font-weight: 300;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    will-change: transform, opacity;
+}
+
+.nav__item a:hover {
+    color: white;
+}
+
+.nav__divider {
+    margin: 1.75rem 0 1.5rem;
+    width: 100%;
+    height: 2px;
+    background-color: #9ac6ac;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.header-top_wrap {
+    position: relative;
+}
 
 
 header {
     background-image: url("../images/bg-desktop.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 315px;
+    padding-bottom: 500px;
     background-position: top center;
 
 
@@ -41,6 +216,7 @@ header {
 
 
 .header-top {
+    position: relative;
     padding: 17px 0;
     max-width: 1185px;
     margin: auto;
@@ -50,14 +226,15 @@ header {
 }
 
 .header-top h2 {
+    position: fixed;
+    right: 60px;
+    top: 10px;
     color: #ffffff;
     font-family: "Open Sans - Semibold", sans-serif;
-    font-size: 16px;
+    font-size: 22px;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.8px;
-    /*margin-right: 50px;*/
-
 
 }
 
@@ -69,16 +246,14 @@ header h1 {
     font-weight: 300;
     line-height: 60px;
     text-align: center;
-    /*margin-top: 204px;*/
+    margin-top: 350px;
 
 }
 
 
-header span{
+header span {
     font-style: italic;
 }
-
-
 
 
 .tell {
@@ -137,7 +312,8 @@ header span{
     text-decoration: none;
     border: 1px solid #000000;
 }
-.tell-link:hover{
+
+.tell-link:hover {
     background-color: orange;
     color: white;
     -webkit-box-shadow: 0 1px 10px 10px #634322;
@@ -200,7 +376,6 @@ header span{
     -o-transform: rotate(-10deg);
     -ms-transform: rotate(-10deg);
     transform: rotate(-10deg);
-    /*box-shadow: 0px 0px 150px #000000;*/
     z-index: 2;
     -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1.5);
@@ -331,7 +506,6 @@ header span{
 }
 
 .last-post {
-    /*background-color: #ffffff;*/
     padding-bottom: 160px;
 }
 
@@ -361,7 +535,6 @@ header span{
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 85px;
-    /*background-color: #f9f9f9;*/
 
 }
 
@@ -373,7 +546,6 @@ header span{
 .last-post_flex img {
     width: 100%;
 }
-
 
 
 .last-post_content {
@@ -421,7 +593,8 @@ header span{
     border: 1px solid #000000;
     text-decoration: none;
 }
-.last-post_read:hover{
+
+.last-post_read:hover {
     background-color: #C42C21;
     color: white;
     -webkit-box-shadow: 0 1px 10px 10px #54574A;
@@ -441,7 +614,8 @@ header span{
     letter-spacing: 0.7px;
 
 }
-.last-post_more:hover{
+
+.last-post_more:hover {
     background-color: orange;
     color: white;
     -webkit-box-shadow: 0 1px 10px 10px #634322;
