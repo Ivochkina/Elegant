@@ -10,135 +10,136 @@
     .header-top h2 {
         top: 30px;
     }
-}
 
 
-@media only screen and (max-width: 768px) {
 
 
-    .header-top h2 {
-        display: none;
+    @media only screen and (max-width: 768px) {
+
+
+        .header-top h2 {
+            display: none;
+        }
+
+
+        .people, .contact, .tell {
+            padding: 153px 15px;
+        }
+
+        .people-container img {
+            width: 100%;
+        }
+
+        .people-container {
+            width: 100%;
+            margin-bottom: 59px;
+        }
+
+        .people-container .inf {
+            display: none;
+        }
+
+        .people-container .inf-mobi {
+            display: block;
+            color: #021725;
+            font-family: "Open Sans", sans-serif;
+            font-size: 29px;
+            font-weight: 300;
+        }
+
+        .last-post {
+            padding: 15px;
+        }
+
+        .contact-info .email-mobi {
+            display: block;
+        }
+
+        .contact-info .email-dask {
+            display: none;
+        }
+
+        .show-flex_img {
+            width: 100%;
+        }
+
+        .last-post_content, .last-post_img {
+            width: 100%;
+        }
+
+        header {
+            background-image: url("../images/bg-mobile.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+
+        }
+
+        header h1 {
+            margin-top: 260px;
+            font-size: 60px;
+
+        }
+
+        header h1:after {
+            display: block;
+            content: "";
+            background-image: url("../images/after_03.png");
+            width: 61px;
+            height: 61px;
+            color: white;
+            border-radius: 50%;
+            position: relative;
+            left: 45%;
+            top: 60px;
+
+        }
+
+        .header-top {
+            background-color: rgba(84, 90, 91, 0.7);
+            padding: initial;
+        }
+
+        .header-top_logo {
+            margin: 10px 0 10px 25px;
+        }
+
+        .header-top_wrap {
+            width: 65px;
+            background-color: rgba(39, 50, 55, 0.7);
+        }
+
+    }
+
+    .nav.is-active {
+        background-color: black;
+        opacity: 1;
+
     }
 
 
-    .people, .contact, .tell {
-        padding: 153px 15px;
+    .nav__trigger.is-active {
+        position: absolute;
+        right: 6%;
     }
 
-    .people-container img {
-        width: 100%;
-    }
 
-    .people-container {
-        width: 100%;
-        margin-bottom: 59px;
-    }
-
-    .people-container .inf {
-        display: none;
-    }
-
-    .people-container .inf-mobi {
-        display: block;
-        color: #021725;
-        font-family: "Open Sans", sans-serif;
-        font-size: 29px;
-        font-weight: 300;
-    }
-
-    .last-post {
-        padding: 15px;
-    }
-
-    .contact-info .email-mobi {
-        display: block;
-    }
-
-    .contact-info .email-dask {
-        display: none;
-    }
-
-    .show-flex_img {
-        width: 100%;
-    }
-
-    .last-post_content, .last-post_img {
-        width: 100%;
-    }
-
-    header {
-        background-image: url("../images/bg-mobile.jpg");
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
+    .nav__trigger {
+        position: absolute;
+        top: 4%;
+        right: 9%;
 
     }
 
-    header h1 {
-        margin-top: 260px;
-        font-size: 60px;
-
+    .nav__content {
+        top: 40%;
+        left: 63%;
     }
 
-    header h1:after {
-        display: block;
-        content: "";
-        background-image: url("../images/after_03.png");
-        width: 61px;
-        height: 61px;
+    .nav__item a {
         color: white;
-        border-radius: 50%;
-        position: relative;
-        left: 45%;
-        top: 60px;
-
     }
-
-    .header-top {
-        background-color: rgba(84, 90, 91, 0.7);
-        padding: initial;
-    }
-
-    .header-top_logo {
-        margin: 10px 0 10px 25px;
-    }
-
-    .header-top_wrap {
-        width: 65px;
-        background-color: rgba(39, 50, 55, 0.7);
-    }
-
 }
-
-.nav.is-active {
-    background-color: black;
-    opacity: 1;
-
-}
-
-
-.nav__trigger.is-active {
-    position: absolute;
-    right: 6%;
-}
-
-
-.nav__trigger {
-    position: absolute;
-    top: 4%;
-    right: 9%;
-
-}
-
-.nav__content {
-    top: 40%;
-    left: 63%;
-}
-
-.nav__item a {
-    color: white;
-}
-
 
 @media only screen and (max-width: 414px) {
 
