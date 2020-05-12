@@ -7,9 +7,9 @@
         padding: 15px;
     }
 
-    .header-top h2 {
-        top: 30px;
-    }
+    /*.header-top h2 {*/
+    /*    top: 30px;*/
+    /*}*/
 
 
 
@@ -105,7 +105,7 @@
         }
 
         .header-top_wrap {
-            width: 65px;
+            width: 78px;
             background-color: rgba(39, 50, 55, 0.7);
         }
 
@@ -140,6 +140,7 @@
         color: white;
     }
 }
+
 
 @media only screen and (max-width: 414px) {
 
